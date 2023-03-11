@@ -1,14 +1,7 @@
 rows = int(input("Enter the number of rows"))
 columns = int(input("Enter the number of columns"))
 
-matrix = []
-
-for i in range(rows):
-    row = []
-    for j in range(columns):
-        value = int(input(f"Enter value for {i + 1, j + 1}"))
-        row.append(value)
-    matrix.append(row)
+matrix = [[int(input(f"Enter {i+1}, {j + 1} element:")) for j in range(columns)] for i in range(rows)]
 
 for i in matrix:
     print(i)
